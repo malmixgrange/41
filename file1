@@ -1,0 +1,19 @@
+#include <iostream>
+#include <algorithm>
+
+int findSmallest(int arr[], int size) {
+    int smallest = arr[0];
+    for (int i = 1; i < size; i++) {
+        if (arr[i] < smallest) {
+            smallest = arr[i];
+        }
+    }
+    return smallest;
+}
+
+int main() {
+    int numbers[] = {5, 2, 9, 1, 7};
+    int size = sizeof(numbers) / sizeof(numbers[0]);
+    std::cout << findSmallest(numbers, size) << std::endl;
+    return 0;
+}
